@@ -1,0 +1,224 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+/* definition of style variables  */
+:root{
+    --prime-color:#181818;
+    --secondary-color:rgb(52, 72, 89);
+    --accent-color1:#B8BFBE;
+    --accent-color2:#E5A92F;
+    --nav-bg:#000000;
+    --bg-strip:hsla(40, 78%, 54%,0.1);
+    --text-header: hsl(0, 0%, 94%);
+    font-size: 12px;
+
+
+
+
+}
+
+
+
+body{
+    height:max-content;
+    margin-top:0px;
+    margin-bottom:0px; 
+    margin:0px;
+    display:flex;
+    flex-flow:column;
+    color:var(--text-header);
+    font-family: 'Lato', sans-serif;
+    font-size:12px;
+}
+
+/* font setup */
+h1, h2, h3, h4, p, a {
+    margin-top:0px;
+    margin-bottom:0px; 
+}
+
+h1{
+    font-size: 6rem;
+
+}
+
+h2 {
+    font-size: 4rem;
+
+}
+
+h3 {
+    font-size: 2rem;
+
+}
+
+h4 {
+    font-size: 1.5rem;
+    font-weight: 900;
+}
+
+p {
+    font-size: 0.8rem;
+}
+
+a{
+    
+    color:var(--text-header);
+    text-decoration: none;
+    font-weight: 700;
+}
+/* BACKGROUND COLUMNS SETUP        Can't touch this! Na-na-na-na */
+main{
+    position:relative;
+}
+
+.bg-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    width: 100%;
+    height:200%;
+    position: absolute;
+    top:0px;
+    left:0px;
+    z-index: -4;
+
+}
+
+.bg-column {
+height: 100%;
+background-color: var(--prime-color);
+}
+
+.bg-column1, .bg-column2, .bg-column3{
+
+    border-right: 1px var(--bg-strip) solid;
+}
+
+
+/* Navigation Bar setup */ 
+nav {
+    margin:0px;
+    display: flex;
+    flex-flow: row; 
+    justify-content: space-between;
+
+
+    background-color: var(--nav-bg);
+    z-index: 4;
+
+}
+
+.logo-nav {
+    padding:12px;
+    max-width: 5vw;
+}
+nav> ul li {
+    padding-right: 12px;
+    display: inline;
+}
+
+
+
+/* Hero section setup */ 
+
+
+.hero-container {
+    position: relative; 
+    top:0;
+    width: 100%;
+    height:50vw;
+    background-image:url(img/hero.jpeg);
+    background-size: cover;
+
+
+}
+
+.hero-container h1 {
+    padding-left: 2rem;
+    font-size:6rem;
+    margin: 0px;
+    padding-top: 6rem;
+}
+
+.hero-container h4 {
+    padding-left: 2rem;
+    margin: 0px;
+    font-size: 2rem;
+    padding-top: 2.25rem;
+}
+
+.hero-container button{
+    margin-top: 4rem;
+    margin-left : 2rem;
+    padding: 1.5rem 3rem 1.5rem 3rem ;
+}
+
+
+
+/* main Content flow */
+.big-wrapper {
+    text-align: start;
+    margin-left:auto;
+    margin-right:auto;
+    display:flex;
+    flex-flow: column;
+}
+
+/* inspiration section setup */
+.inspiration-section {
+    display:grid;
+    grid-template-columns: repeat(12,1fr);
+    grid-template-rows: repeat(3,auto);
+}
+
+.inspiration-head1 {
+    
+    grid-column: 3/ span 2;
+}
+
+.inspiration-head2 {
+    grid-row:2;
+    grid-column: 3/ span 8;
+}
+
+/*experience section setup */
+
+
+.tour-cards-container {
+    display:grid;
+    grid-template-columns: repeat(4,1fr);
+    align-items: center;
+}
+
+.tour-card{
+   
+}
+.tour-card1 {
+    grid-column:1;
+    padding-top:3rem;
+    padding-bottom:1rem; 
+    background-color: red;  
+}
+
+.tour-card2 {
+    grid-column:2;
+    padding-top:3rem;
+    padding-bottom:1rem; 
+    background-color: red; 
+    
+}
+
+.tour-card3 {
+    grid-column:3;
+    padding-top:1rem;
+    padding-bottom:1rem; 
+    background-color: red; 
+}
+
+.tour-card4 {
+    grid-column:4;
+    padding-top:3rem;
+    padding-bottom:1rem; 
+    background-color: red; 
+}
+
+
