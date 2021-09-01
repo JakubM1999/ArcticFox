@@ -10,6 +10,7 @@
     --bg-strip:hsla(40, 78%, 54%,0.15);
     --text-header: hsl(0, 0%, 94%);
     --text-light: hsla(0,0%,94%,0.3);
+    --golden: #C69E39;
     font-size: 16px;
 
 
@@ -26,6 +27,7 @@ body{
     margin:0px;
     color:var(--text-header);
     font-family: 'Lato', sans-serif;
+    background-color: var(--prime-color);
 }
 
 /* font setup */
@@ -54,44 +56,46 @@ a{
     text-decoration: none;
     font-weight: 700;
 }
-/* BACKGROUND COLUMNS SETUP        Can't touch this! Na-na-na-na */
-main{
-    position:relative;
+.golden {
+    color: var(--golden);
 }
-
-
-.bg-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    width: 100%;
-    height:inherit;
-    position: absolute;
-    top:0px;
-    left:0px;
-    z-index: -4;
-
-}
-
-.bg-column {
-    align-self:strech;
-height: 100%;
-background-color: var(--prime-color);
-}
-
-.bg-column1, .bg-column2, .bg-column3{
-
-    border-right: 1px var(--bg-strip) solid;
-}
-
-
 /* Navigation Bar setup */ 
+
+/*Background setup */
+
+.line {
+    width:1px;
+    position:fixed;
+    background-color: var(--bg-strip);
+    height:100%;
+    z-index: -4;
+}
+
+.line1{
+    left: 25%;
+    
+}
+
+.line2{
+    left:50%;
+    
+}
+
+.line3{
+    left:75%;
+}
+
+
+
 nav {
-    margin:0px;
+    width: 100%;
+    position:fixed;
+    top:0;
     display: flex;
     flex-flow: row; 
     justify-content: space-between;
 
-
+border-bottom: 3px var(--accent-color1) solid;
     background-color: var(--nav-bg);
     z-index: 4;
 
