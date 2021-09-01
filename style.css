@@ -2,14 +2,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
 /* definition of style variables  */
 :root{
-    --prime-color:#181818;
-    --secondary-color:rgb(52, 72, 89);
-    --accent-color1:#B8BFBE;
-    --accent-color2:#E5A92F;
+    --prime-color:#000101;
+    --secondary-color:hsla(162, 22%, 67%,0.8);
+    --accent-color1:#A0E9D3;
+    --accent-color2:#0F98DCff;
     --nav-bg:#000000;
-    --bg-strip:hsla(40, 78%, 54%,0.1);
+    --bg-strip:hsla(40, 78%, 54%,0.15);
     --text-header: hsl(0, 0%, 94%);
-    font-size: 12px;
+    --text-light: hsla(0,0%,94%,0.3);
+    font-size: 16px;
 
 
 
@@ -23,41 +24,28 @@ body{
     margin-top:0px;
     margin-bottom:0px; 
     margin:0px;
-    display:flex;
-    flex-flow:column;
     color:var(--text-header);
     font-family: 'Lato', sans-serif;
-    font-size:12px;
 }
 
 /* font setup */
-h1, h2, h3, h4, p, a {
-    margin-top:0px;
-    margin-bottom:0px; 
-}
+h1, h2, h3, h4, h5 {
+    margin: 3rem 0 1.38rem;}
 
+p {margin-bottom: 1rem;}
 h1{
-    font-size: 6rem;
-
+    font-size: 4.209rem;
 }
 
-h2 {
-    font-size: 4rem;
+h2 {font-size: 3.157rem;}
 
-}
+h3 {font-size: 2.369rem;}
 
-h3 {
-    font-size: 2rem;
+h4 {font-size: 1.777rem;}
 
-}
+h5 {font-size: 1.333rem;}
 
-h4 {
-    font-size: 1.5rem;
-    font-weight: 900;
-}
-
-p {
-    font-size: 0.8rem;
+small, .text_small {font-size: 0.75rem;
 }
 
 a{
@@ -71,11 +59,12 @@ main{
     position:relative;
 }
 
+
 .bg-grid {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     width: 100%;
-    height:200%;
+    height:inherit;
     position: absolute;
     top:0px;
     left:0px;
@@ -84,6 +73,7 @@ main{
 }
 
 .bg-column {
+    align-self:strech;
 height: 100%;
 background-color: var(--prime-color);
 }
@@ -128,19 +118,20 @@ nav> ul li {
     height:50vw;
     background-image:url(img/hero.jpeg);
     background-size: cover;
+    border-radius:100% 0% 100% 0% / 14% 89% 11% 86%; 
 
 
 }
 
 .hero-container h1 {
-    padding-left: 2rem;
+    padding-left: 4rem;
     font-size:6rem;
     margin: 0px;
     padding-top: 6rem;
 }
 
 .hero-container h4 {
-    padding-left: 2rem;
+    padding-left: 4rem;
     margin: 0px;
     font-size: 2rem;
     padding-top: 2.25rem;
@@ -148,8 +139,12 @@ nav> ul li {
 
 .hero-container button{
     margin-top: 4rem;
-    margin-left : 2rem;
+    margin-left : 4rem;
     padding: 1.5rem 3rem 1.5rem 3rem ;
+    border-radius: 2rem;
+    border: 3px var(--accent-color2) solid;
+    background-color: var(--secondary-color);
+    color: var(--text-header)
 }
 
 
@@ -168,16 +163,17 @@ nav> ul li {
     display:grid;
     grid-template-columns: repeat(12,1fr);
     grid-template-rows: repeat(3,auto);
+    margin-top:10rem;
 }
 
 .inspiration-head1 {
     
-    grid-column: 3/ span 2;
+    grid-column: 5/ span 2;
 }
 
 .inspiration-head2 {
     grid-row:2;
-    grid-column: 3/ span 8;
+    grid-column: 4/ span 8;
 }
 
 /*experience section setup */
@@ -185,25 +181,29 @@ nav> ul li {
 
 .tour-cards-container {
     display:grid;
-    grid-template-columns: repeat(4,1fr);
+    grid-template-columns: repeat(4,25%);
     align-items: center;
+  
+
 }
 
 .tour-card{
-   
+   background-color:var(--secondary-color);
+   border:1px var(--bg-strip) solid;
+  
 }
 .tour-card1 {
     grid-column:1;
     padding-top:3rem;
     padding-bottom:1rem; 
-    background-color: red;  
+    align-self: center;
 }
 
 .tour-card2 {
     grid-column:2;
     padding-top:3rem;
     padding-bottom:1rem; 
-    background-color: red; 
+     
     
 }
 
@@ -211,14 +211,14 @@ nav> ul li {
     grid-column:3;
     padding-top:1rem;
     padding-bottom:1rem; 
-    background-color: red; 
+     
 }
 
 .tour-card4 {
     grid-column:4;
     padding-top:3rem;
     padding-bottom:1rem; 
-    background-color: red; 
+    
 }
 
 
